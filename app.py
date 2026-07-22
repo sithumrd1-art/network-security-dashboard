@@ -266,7 +266,7 @@ st.subheader("📋 Network Traffic Records")
 
 st.dataframe(
     filtered_df,
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
@@ -335,7 +335,7 @@ if attack_records.empty:
 else:
     st.dataframe(
         attack_records,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -369,7 +369,7 @@ else:
 
         st.dataframe(
             top_attack_ips,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -425,7 +425,7 @@ with download_col1:
         data=csv_report,
         file_name="network_security_report.csv",
         mime="text/csv",
-        use_container_width=True,
+        width="stretch",
     )
 
 with download_col2:
@@ -434,7 +434,7 @@ with download_col2:
         data=summary_report,
         file_name="network_security_summary.txt",
         mime="text/plain",
-        use_container_width=True,
+        width="stretch",
     )
     # -----------------------------
 # AI Attack Prediction
@@ -485,7 +485,7 @@ else:
     if st.button(
         "Analyze Network Traffic",
         type="primary",
-        use_container_width=True,
+        width="stretch",
     ):
         prediction_data = pd.DataFrame(
             {
